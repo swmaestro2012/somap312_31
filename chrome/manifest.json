@@ -1,0 +1,29 @@
+{
+  "name": "Image to Torrent",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Image To Torrent",
+  "homepage_url": "http://www.monodiary.net/",
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+      "128": "icons/icon_128.png",
+      "16": "icons/icon_16.png",
+      "48": "icons/icon_48.png"
+   },
+  "browser_action": {
+    "default_icon": "icons/icon_19.png"
+  },
+  "content_scripts": [
+    {
+     "matches": ["http://*/*", "https://*/*"],
+     "js": ["js/jquery.min.js", "js/content.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
